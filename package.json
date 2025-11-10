@@ -13,5 +13,13 @@
     "express": "^5.1.0",
     "mysql2": "^3.15.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrazyDev64/DWEV3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CrazyDev64/DWEV3/issues"
+  },
+  "homepage": "https://github.com/CrazyDev64/DWEV3#readme",
   "description": ""
 }

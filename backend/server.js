@@ -25,8 +25,23 @@ conexion.connect(err => {
 });
 
 // Ruta para obtener datos
+// Ruta para obtener datos con filtrado
 app.get('/api/datos', (req, res) => {
-  conexion.query('SELECT * FROM Item', (err, resultados) => {
+  const { nombre, descripcion } = req.query;
+  let sql = 'SELECT * FROM Item';
+  let params = [];
+  if (nombre || descripcion) {
+    sql += ' WHERE 1=1';
+    if (nombre) {
+      sql += ' AND item_Name LIKE ?';
+      params.push(`%${nombre}%`);
+    }
+    if (descripcion) {
+      sql += ' AND descriptionShown LIKE ?';
+      params.push(`%${descripcion}%`);
+    }
+  }
+  conexion.query(sql, params, (err, resultados) => {
     if (err) {
       console.error(err);
       res.status(500).send('Error al consultar la base de datos');
