@@ -21,5 +21,6 @@
     "url": "https://github.com/CrazyDev64/DWEV3/issues"
   },
   "homepage": "https://github.com/CrazyDev64/DWEV3#readme",
-  "description": ""
+  "description": "",
+  "type": "commonjs"
 }
