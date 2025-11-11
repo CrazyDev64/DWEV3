@@ -8,6 +8,9 @@ const port = 3000;
 
 app.use(cors());
 
+// Servir archivos estáticos (CSS, JS, imágenes, etc.)
+app.use(express.static(path.join(__dirname, '..', 'frontend')));
+
 // Configuración de conexión MySQL
 const conexion = mysql.createConnection({
   host: 'localhost',

@@ -21,6 +21,6 @@
     "url": "https://github.com/CrazyDev64/DWEV3/issues"
   },
   "homepage": "https://github.com/CrazyDev64/DWEV3#readme",
-  "description": "",
+  "description": "Proyecto web que consulta y muestra ítems del juego The Binding of Isaac desde una base de datos MySQL. Incluye frontend con Bootstrap, backend en Node.js y Express, y estructura profesional.",
   "type": "commonjs"
 }
